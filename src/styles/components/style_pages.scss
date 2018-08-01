@@ -1,0 +1,200 @@
+.big_style_image{
+    width: 348%;
+    height: auto;
+    -webkit-clip-path: polygon(0% 14%, 53% 14%, 53% 45%, 0% 45%);
+    clip-path: polygon(0% 0%, 53% 0%, 53% 100%, 0% 100%);
+    margin-left: -220px;
+    margin-top: -22px;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+}
+
+
+.swing_adjust{
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+margin-left: -404px;
+margin-top: -22px;
+}
+
+.salsa_adjust{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -387px;
+    margin-top: -22px;
+}
+
+.modern_adjust{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -506px;
+    margin-top: -22px;
+}
+
+.wedding_adjust{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -422px;
+    margin-top: -50px;
+
+}
+
+.belly_adjust{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    margin-left: -391px;
+    margin-top: -23px;
+}
+
+.big_style_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.top_half_menu{
+    grid-column: 1/-1;
+    grid-row: 1/4;
+    background-color: #d9da2761;
+    border-radius: 111px 70px 27px 193px;
+    z-index: 2;
+   
+    display: grid;
+    grid-template-columns: 21% 1fr 1fr 1fr 8%;
+    grid-template-rows: auto auto auto auto auto ;
+}
+.bottom_half_menu{
+    grid-column: 1/-1;
+    grid-row: 5/-1;
+    background-color:  #d9da2761;
+    border-radius: 177px 45px 0 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto ;
+}
+.half_menu_text{
+    font-family: "brother-1816",sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    justify-self: center;
+    align-self: end;
+    margin-top: 0;
+    z-index: 4;
+    margin-bottom: 30px;
+    font-size: 26px;
+    grid-column: 1/-1;
+    grid-row:1/2;
+
+}
+
+.schedule_table{
+    border: 18px solid #b9186e54;
+    grid-column: 2/5;
+    grid-row: 3/-1;
+    justify-self: center;
+    font-size: 12px;
+}
+thead{
+    justify-content: center;
+}
+th {
+    border: 1px solid black;
+    justify-content: center;
+}
+td{
+    width: 100%;
+    padding: 5px;
+    font-family: "brother-1816",sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+    justify-self: center;
+    align-self: end;
+}
+.back_arrow{
+    height: 32px;
+    width: 32px;
+    margin-right: 16px;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    z-index: 3;
+    margin-top: 30px;
+    justify-self: flex-end;
+    opacity: .5;
+}
+.half_menu_schedule{
+    grid-column: 4/-1;
+    grid-row: 1/2;
+    height: 30px;
+    width: auto;
+    z-index: 3;
+    justify-self: center;
+    align-self: center;
+    margin-top: 35px;
+    margin-right: 47px;
+}
+
+.half_menu_instructors{
+    grid-column: 4/-1;
+    grid-row: 1/2;
+    height: 30px;
+    width: auto;
+    z-index: 3;
+    justify-self: center;
+    align-self: center;
+    margin-top: 35px;
+    margin-right: 21px;
+
+}
+
+.style_name{
+    font-family: lust-script-display, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    font-size: 6rem;
+    z-index: 3;
+    grid-column: 2/6;
+    justify-self: flex-end;
+    align-self: center;
+    margin-right: 26px;
+    grid-row: 3/6;
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);    
+}
+
+.style_schedule{
+    font-family: "brother-1816",sans-serif;
+    color: #d8d5d8;
+    font-weight: 600;
+    justify-self: center;
+    align-self: end;
+    margin-top: 0;
+    grid-row: 5/6;
+    grid-column: 2/3;
+    z-index: 3;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+.style_instructors{
+
+    font-family: "brother-1816",sans-serif;
+    color: #d8d5d8;
+    font-weight: 600;
+    justify-self: center;
+    align-self: end;
+    margin-top: 0;
+    grid-row: 5/6;
+    grid-column: 4/5;
+    z-index: 3;
+    margin-bottom: 30px;
+}

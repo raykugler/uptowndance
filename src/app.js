@@ -1,6 +1,7 @@
 //three steps to using npm modules. 1.Install 2.Import 3.Use
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import { BrowserRouter, Route , Switch,  Link} from 'react-router-dom';
 import Dance_App from './components/DanceApp';
 import 'normalize.css/normalize.css';

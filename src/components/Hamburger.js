@@ -1,5 +1,9 @@
 import React from 'react';
 import Menu from './Menu';
+
+
+
+
 class Hamburger extends React.Component{
     state = {
         condition: false

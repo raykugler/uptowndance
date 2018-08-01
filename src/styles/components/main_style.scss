@@ -19,11 +19,11 @@
     grid-row: 1/2;
     grid-column: 1/2;
     margin-top: 20px;
-    width: 30px;
+    width: 18px;
     height: auto;
     position: absolute;
     top: 20px;
-    left: 33px;
+    left: 14px;
     transform: rotate(0deg);
     transition: transform .5s;
     z-index: 3;
@@ -101,7 +101,7 @@
 .grey_bar{
     background-color:#4b453a;
     height: 100%;
-    width: 25%;
+    width: 20%;
     justify-content: left;
     position: absolute;
     top: 0;
@@ -123,7 +123,7 @@
 .blue_bar{
     background-color:#4b453a;
     height: 100%;
-    width: 0%;
+    width: 13%;
     justify-content: left;
     position: absolute;
     top: 0;
@@ -132,7 +132,7 @@
     -webkit-transition: width .5s;
     transition: width .5s;
     display: grid;
-    grid-template-columns: 100px;
+    grid-template-columns: 73px;
     grid-template-rows: 160px 50px 60px 50px 60px 50px 60px 50px 60px 60px ;
     z-index: 2;
 }
@@ -140,18 +140,20 @@
 .menu_images{
     height: 50px;
     width: auto;
-    justify-self: center;
+    justify-self: flex-start;
     align-self: center;
     opacity: 1;
-    transition: opacity .5s;
+    transition: height .5s;
+    margin-left: 2px;
 }
  .no_menu_images{
-    height: 50px;
+    height: 37px;
     width: auto;
-    justify-self: center;
+    justify-self: flex-start;
     align-self: center;
-     opacity: 0;
-     transition: opacity .2s;
+     opacity: 1;
+     transition: height .2s;
+     margin-left: 2px;
  }
 
 
@@ -186,6 +188,7 @@
  .image_two{
     grid-column: 1/2;
     grid-row: 4/5;
+    padding-left: 2px;
 }
 .title_two{
     grid-column: 1/2;
@@ -194,6 +197,8 @@
 .image_three{
     grid-column: 1/2;
     grid-row: 6/7;
+    margin-right: 23px;
+    
 }
 .title_three{
     grid-column: 1/2;
@@ -203,6 +208,7 @@
 .image_four{
     grid-column: 1/2;
     grid-row: 8/9;
+    padding-left: 3px;
 }
 .title_four{
     grid-column: 1/2;

@@ -10,63 +10,67 @@ import Wedding from './Wedding.js';
 import Belly from './Belly.js';
 
     class Dance_Styles_List extends React.Component {
-        constructor() {
-            super()
-            this.styleChoice = this.styleChoice.bind(this);
+        constructor(props) {
+            super(props)
             this.state ={
                 choice: 0
             };
-    
+            
           }
+          componentDidMount() {
+            window.scrollTo(0,0);
+        }
                  
        styleChoice=(e)=> {
            this.setState({choice: e})
 
        }
+       resetChoice = () => { this.setState({ choice: 0 }); }
         render(){
           
      if (this.state.choice ===1){
          console.log(this.state.choice);
               return(
-                  <Salsa />
+                  <Salsa resetChoice={this.resetChoice}/>
               )
           }
       else if(this.state.choice ===2){  
         console.log(this.state.choice);          
             return(
-                <Tango />
+                <Tango resetChoice={this.resetChoice}/>
             )
         }
      else if(this.state.choice ===3){  
         console.log(this.state.choice);          
         console.log('hiphop');  
         return(
-                <HipHop styleChoice={this.reset}/>
+                <HipHop resetChoice={this.resetChoice}/>
+                
             )
         }
      else if(this.state.choice ===4){  
         console.log(this.state.choice);          
             return(
-                <Modern />
+                <Modern resetChoice={this.resetChoice}/>
             )
         }
      else if(this.state.choice ===5){ 
         console.log(this.state.choice);             
             return(
-                <Swing />
+                <Swing resetChoice={this.resetChoice}/>
             )
         }
      else if(this.state.choice ===6){    
         console.log(this.state.choice);          
             return(
-                <Wedding />
+                <Wedding resetChoice={this.resetChoice}/>
             )
         }
      else if(this.state.choice ===7){    
         console.log(this.state.choice);  
                 
             return(
-                <Belly />
+                <Belly resetChoice={this.resetChoice}/>
             )
         }
 

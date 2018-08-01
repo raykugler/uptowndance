@@ -5,6 +5,7 @@ import Typekit from 'react-typekit';
 import Dance_Styles_List from './Dance_Styles_List';
 
 
+
 const Dance_Styles =(props) => {
     
     return(
