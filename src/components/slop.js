@@ -66,3 +66,122 @@ class ButtonParent extends React.Component {
       )    
     }
   });
+
+
+  class Button extends React.Component {
+    this.state ={
+      word: 'bird'
+    };
+   
+    handleClick = () => {
+      console.log(this.state.word);
+    }
+  
+    render() {
+      return (
+        <button onClick={e => this.handleClick('well a')}/>
+      );
+    }
+  }
+
+  <button onClick={(e) => this.deleteRow(id, e)}>Delete Row</button>
+<button onClick={this.deleteRow.bind(this, id)}>Delete Row</button>
+
+
+
+class Tango extends React.Component {
+  constructor(props){
+      super(props)
+  this.state={
+      style: 'Tango'
+  }
+  };
+  render(){
+  return(  
+      <div className='big_style_grid'  >
+
+        <High_Style resetChoice= {this.props.resetChoice} >
+          <Bio  instructor={this.props.instructor}/>
+        </High_Style>
+      
+        <p className='style_name'>Tango</p>
+        <img src={'/images/dance_images/tango.jpg'} className='big_style_image'/> 
+      
+        <Low_Style style={this.state.style}  />
+      
+      </div>    
+  );}}
+export default Tango;
+
+
+
+class Teachers extends React.Component{
+  constructor(props){
+      super(props)
+  this.state ={
+      instructor: 5
+  };}
+  
+  setBio=(e)=>{
+      this.setState({instructor: e})
+      console.log({e})
+  }
+render(teachers){
+   return(
+  <Query query={Q_Instructors} variable={{teachers}}>
+    {({loading, error, data}) =>{
+       if (loading) return <td>Loading...</td>
+       if (error) return <td>Error:</td>
+       return data.teachers.filter(teacher => teacher.tango).map(({ theirPhoto, tango, id }) => (
+      <td key={id}>
+          <img key={id} src={`${theirPhoto.url}`}  className='headshot' onClick={ e => this.setBio(id)}/>
+      </td>
+    )); 
+    }}
+  </Query>         
+)}}
+
+export default Teachers;
+
+class High_Style extends React.Component {
+  constructor(props){
+      super(props)
+  }
+render(){
+return(
+  <div className='top_half_menu'>  
+    <img src={'/images/right_arrow.png'} className='back_arrow' onClick={this.props.resetChoice}/>
+    
+    <Bio  instructor={this.props.e}/>
+  
+  </div>
+)}}
+
+export default High_Style;
+class Bio extends React.Component {
+  constructor(props){
+      super(props)
+  }
+  render(){
+  return(
+  <p className='bio'> {`efweewfewf ${this.props.instructor} ggererg`}</p>
+)}}
+export default Bio;
+
+
+
+
+const Teacher = ({teachers})=>(
+  <Query query={Q_Instructors} variable={{teachers}}>
+  {({loading, error, data}) =>{
+     if (loading) return <td>Loading...</td>
+     if (error) return <td>Error:</td>
+     return data.teachers.filter(teacher => teacher.tango).map(({ teacherName, theirPhoto, tango, id }) => (
+      <td key={id}>
+        
+      <img key={id} src={`${theirPhoto.url}`}  className='headshot' onClick={e =>this.props.setBio(id)}/>
+      </td>
+    ));
+  }}
+  </Query>   
+  );

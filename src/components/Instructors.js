@@ -1,5 +1,14 @@
 import React from 'react';
-const Instructors = (props) =>{
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+import Q_Instructors from './Q_Instructors';
+
+
+class Instructors extends React.Component {
+    constructor(props){
+        super(props)
+    }
+    render(){
     return(
  
     <div className='instructors'>
@@ -7,6 +16,6 @@ const Instructors = (props) =>{
     </div>
 );
 
-};
+}};
 
 export default Instructors;

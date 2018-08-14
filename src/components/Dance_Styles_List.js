@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Typekit from 'react-typekit';
 import HipHop from './HipHop.js';
 import Tango from './Tango.js';
@@ -23,6 +24,7 @@ import Belly from './Belly.js';
                  
        styleChoice=(e)=> {
            this.setState({choice: e})
+           
 
        }
        resetChoice = () => { this.setState({ choice: 0 }); }
@@ -83,37 +85,37 @@ import Belly from './Belly.js';
     <div className='styles_menu'>
     <h1 className="dance_style_head">Dance Styles</h1>
 
-    <div className='block_one' onClick={ e => this.styleChoice(1)}>
+    <div className='block_one curved-edges' onClick={ e => this.styleChoice(1)}>
         <p className='style_block_text' ref='salsa'>Salsa</p>
         <img src={'/images/dance_images/salsa.jpg'}className='block style_image_one'/>
     </div>
     
-    <div className='block_two'  onClick={ e => this.styleChoice(2)}>
+    <div className='block_two curved-edges'  onClick={ e => this.styleChoice(2)}>
         <p className='style_block_text'>Tango</p>
         <img src={'/images/dance_images/tango.jpg'}className='block style_image_two'/>
     </div>
     
-    <div className='block_three' onClick={ e => this.styleChoice(3)}>
+    <div className='block_three curved-edges' onClick={ e => this.styleChoice(3)}>
         <p className='style_block_text'>Hip Hop</p>
         <img src={'/images/dance_images/hiphop.jpg'}className='block style_image_three'/>
     </div>
 
-    <div className='block_four' onClick={ e => this.styleChoice(4)}>
+    <div className='block_four curved-edges' onClick={ e => this.styleChoice(4)}>
         <p className='style_block_text'>Modern</p>
         <img src={'/images/dance_images/modern.jpg'}className='block style_image_four'/>
     </div>
 
-    <div className='block_five' onClick={ e => this.styleChoice(5)}>
+    <div className='block_five curved-edges' onClick={ e => this.styleChoice(5)}>
         <p className='style_block_text'>Swing</p>
         <img src={'/images/dance_images/swing.jpg'}className='block style_image_five'/>
     </div>
     
-    <div className='block_six' onClick={ e => this.styleChoice(6)}>
+    <div className='block_six curved-edges' onClick={ e => this.styleChoice(6)}>
         <p className='style_block_text'>Wedding</p>
         <img src={'/images/dance_images/wedding.jpg'}className='block style_image_six'/>
     </div>
 
-    <div className='block_seven' onClick={ e => this.styleChoice(7)}>
+    <div className='block_seven curved-edges' onClick={ e => this.styleChoice(7)}>
         <p className='style_block_text'>Belly</p>
         <img src={'/images/dance_images/belly.jpg'}className='block style_image_seven'/>
     </div>

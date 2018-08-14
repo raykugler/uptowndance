@@ -1,31 +1,49 @@
 import React from 'react';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+import Q_Instructors from './Q_Instructors';
+import Teacher_Name from './Teacher_Name';
+import Teachers from './Teachers';
+import Low_Style from './Low_Style';
+import Style_Description from './Style_Description';
+import High_Style from './High_Style';
+
 class Salsa extends React.Component {
-    constructor(props){
-        super(props)
-    }
-       
-   resetChoice = () => { 
-           this.setState({ choice: 0 });
-           console.log(props.choice)
-       }
-   
+        constructor(props){
+            super(props)
+        this.state={
+            style: 'Salsa',
+            instructor: '',
+            classes: 'salsa'
+        }
+        } 
+        componentDidMount() {
+            window.scrollTo(0,0);
+        } 
+        setBio=(id)=>{
+            this.setState({instructor: id})
+            console.log({id})
+        };    
       
-       render(){
-    
-    return(
-        <div className='big_style_grid'>
-        <div className='bottom-half_menu'></div>
-        <div className='top-half_menu'></div>
-        <p className='style_name'>Salsa</p>
-        <pre className='style_schedule'>   Salsa <br/> Classes</pre>
-        <pre className='style_instructors'>     Salsa <br/> Instructors</pre>
-        <img src={'images/scheduleicon.png'} className='half_menu_schedule'/>
-        <img src={'images/instructors.png'} className='half_menu_instructors'/>
+      
+      
+        render(){
+        return(  
+            <div className='big_style_grid'  >
+            <High_Style resetChoice= {this.props.resetChoice} instructor={this.state.instructor}/> 
+            
+            <p className='style_name'>Salsa</p>
+            <img src={'/images/dance_images/salsa.jpg'} className='big_style_image salsa_adjust'/>
+           
+            
+            <Low_Style style={this.state.style} setBio={this.setBio} classes={this.state.classes}/>
+           
+            
+            </div>    
+        );}
         
-        <img src={'/images/dance_images/salsa.jpg'}className='big_style_image salsa_adjust'/>
-        <img src={'/images/right_arrow.png'}className='back_arrow' onClick={this.props.resetChoice}/>
-        </div>
-    )
-}
-}
+    }
+    
+    
+    
 export default Salsa;

@@ -13,19 +13,15 @@ import Wedding from '../Wedding';
 import Modern from '../Modern';
 import Swing from '../Swing';
 import Belly from '../Belly';
+import Instructors from '../Instructors';
+
 
 const Routes = (
   <BrowserRouter>
   <div>
     <Route path='/' component={Main} exact={true}/>
     <Route path='/dance_styles' component={Dance_Styles}/>
-    <Route path='/salsa' component={Salsa}/>
-    <Route path='/tango' component={Tango}/>
-    <Route path='/hiphop' component={HipHop}/>
-    <Route path='/wedding' component={Wedding}/>
-    <Route path='/modern' component={Modern}/>
-    <Route path='/swing' component={Swing}/>
-    <Route path='/belly' component={Belly}/>
+    <Routh path='/teachers' component={Instructors}/>
     </div>
   </BrowserRouter>
 );

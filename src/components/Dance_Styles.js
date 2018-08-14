@@ -1,20 +1,26 @@
 import React from 'react';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
 import Menu from './Menu';
 import Hamburger from './Hamburger';
 import Typekit from 'react-typekit';
 import Dance_Styles_List from './Dance_Styles_List';
 
-
+const client = new ApolloClient({
+    uri: "https://api-uswest.graphcms.com/v1/cjkb8en5w1x2j01d2buf11dvk/master"
+  });
 
 const Dance_Styles =(props) => {
     
     return(
+    <ApolloProvider client={client}>    
     <div>
     <Dance_Styles_List />
         <Hamburger>
         <Menu condition={props.condition}/>
         </Hamburger>
     </div>
+    </ApolloProvider>
     );
 }
 

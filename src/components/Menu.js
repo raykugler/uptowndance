@@ -17,7 +17,7 @@ const Menu =(props)=>{
         <img src={'images/stylesicon.png'} className={props.condition ? 'menu_images image_two' : 'no_menu_images image_two'}  />
         <p className={props.condition ? 'menu_title title_two' : 'no_menu_title title_two'}>Styles</p>
         </Link>
-        <Link to='/dance_styles'className={props.condition ? 'menu_images image_three' : 'no_menu_images image_three'}>
+        <Link to='/teachers'className={props.condition ? 'menu_images image_three' : 'no_menu_images image_three'}>
         <img src={'images/instructors.png'} className={props.condition ? 'menu_images image_three' : 'no_menu_images image_three'}/>
         <p className={props.condition ? 'menu_title title_three' : 'no_menu_title title_three'}>Intructors</p>
         </Link>
