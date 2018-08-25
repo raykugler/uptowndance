@@ -2,23 +2,29 @@ import React from 'react';
 import Typekit from 'react-typekit';
 //import ShowMenu from './Show_Menu';
 import Menu from './Menu';
-import Hamburger from './Hamburger';
+
 import Cover from './Cover';
+import Full_Page from './Full_Page';
+import Media from 'react-media';
+
+
 
 const Main =(props)=> {
    
      return(
 <div>
-<Cover condition={props.condition}/> 
-          <Hamburger>
-          
-          
-          <Menu condition={props.condition} />
-            
-       
-    
-         
-        </Hamburger>          
+<Media query="(min-width: 600px)">
+{matches => 
+    matches ? (
+<Full_Page />
+    ) : (
+<div>
+        <Cover />            
+        <Menu />
+</div>
+    )
+}
+    </Media>
 </div>
    
      );

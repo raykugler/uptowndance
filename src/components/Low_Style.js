@@ -2,8 +2,6 @@ import React from 'react';
 import Teacher_Name from './Teacher_Name';
 import Teachers from './Teachers';
 import Style_Description from './Style_Description';
-import Bio from './Bio';
-import PropTypes from 'prop-types';
 
 class Low_Style extends React.Component{
     constructor(props){
@@ -33,7 +31,7 @@ class Low_Style extends React.Component{
            
     
             <div className='schedule_button'>
-            <a href="https://www.schedulicity.com/scheduling/SYL6WN"  title="Online scheduling" target="_blank">
+            <a href="https://www.schedulicity.com/scheduling/SYL6WN/classes"  title="Online scheduling" target="_blank">
             <img src="//cdn.schedulicity.com/images/schedulenow_dk_red2_md.png" alt="Online scheduling" title="Online scheduling"  border="0" />
             </a>
             </div>

@@ -9,6 +9,7 @@ import Modern from './Modern.js';
 import Swing from './Swing.js';
 import Wedding from './Wedding.js';
 import Belly from './Belly.js';
+import Small_Menu from './Small_Menu';
 
     class Dance_Styles_List extends React.Component {
         constructor(props) {
@@ -27,7 +28,10 @@ import Belly from './Belly.js';
            
 
        }
-       resetChoice = () => { this.setState({ choice: 0 }); }
+       resetChoice = () => { 
+           this.setState({ choice: 0 });
+        console.log('cheese')
+     }
         render(){
           
      if (this.state.choice ===1){
@@ -81,10 +85,10 @@ import Belly from './Belly.js';
           
     return  (  
     <div className='dance_styles_page'>
+    
    
     <div className='styles_menu'>
-    <h1 className="dance_style_head">Dance Styles</h1>
-
+    <div className='dance_style_head'>Dance Styles</div>
     <div className='block_one curved-edges' onClick={ e => this.styleChoice(1)}>
         <p className='style_block_text' ref='salsa'>Salsa</p>
         <img src={'/images/dance_images/salsa.jpg'}className='block style_image_one'/>
@@ -112,7 +116,7 @@ import Belly from './Belly.js';
     
     <div className='block_six curved-edges' onClick={ e => this.styleChoice(6)}>
         <p className='style_block_text'>Wedding</p>
-        <img src={'/images/dance_images/wedding.jpg'}className='block style_image_six'/>
+        <img src={'/images/dance_images/wedding.png'}className='block style_image_six'/>
     </div>
 
     <div className='block_seven curved-edges' onClick={ e => this.styleChoice(7)}>
@@ -122,6 +126,7 @@ import Belly from './Belly.js';
 
     <Typekit kitId="sim6twb" /> 
     </div>
+    <Small_Menu resetChoice={this.props.resetChoice}/>
     </div>
 );
 }}}

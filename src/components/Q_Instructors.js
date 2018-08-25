@@ -1,6 +1,4 @@
-import React from 'react';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
 
 const Q_Instructors =  gql`
 {        
@@ -16,6 +14,7 @@ const Q_Instructors =  gql`
                  hipHop
                  wedding
                  modern
+                 classesTaught
      theirPhoto {
              url
              

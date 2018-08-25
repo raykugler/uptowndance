@@ -1,7 +1,5 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Query, renderToStringWithData } from 'react-apollo';
-import Q_Instructors from './Q_Instructors';
 import Q_Describe from './Q_Description';
 
 class Style_Description extends React.Component{

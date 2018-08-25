@@ -1,9 +1,7 @@
 import React from 'react';
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import Q_Instructors from './Q_Instructors';
-import Bio from './Bio';
-import PropTypes from 'prop-types';
+
 class Teachers extends React.Component{
     constructor(props){
         super(props)

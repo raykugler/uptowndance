@@ -8,12 +8,17 @@ import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import Main from './components/Main';
 import Dance_Styles from './components/Dance_Styles';
+import Instructors from './components/Instructors';
+import Find_Us from './components/Find_Us';
+import Routes from './components/routers/AppRouter';
 
 const routes = (
   <BrowserRouter>
   <div>
     <Route path='/' component={Main} exact={true}/>
     <Route path='/dance_styles' component={Dance_Styles}/>
+    <Route path='/teachers' component={Instructors}/>
+    <Route path='/findus' component={Find_Us}/>
     </div>
   </BrowserRouter>
 );

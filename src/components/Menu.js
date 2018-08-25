@@ -2,32 +2,32 @@ import React from 'react';
 import Typekit from 'react-typekit';
 //import ShowMenu from './Show_Menu';
 import { BrowserRouter, Route , Switch,  Link} from 'react-router-dom';
+import Style_Button from './Styles_Button';
+import Teachers_Button from './Teachers_Button';
+import Schedule_Button from './Schedule_Button';
+import Find_Us_Button from './Find_Us_Button';
+
+class Menu extends React.Component{
+ constructor(props){
+     super(props)
+    
+ }
 
 
-const Menu =(props)=>{
-
-    return( 
-           <div className={props.condition ? 'grey_bar' : 'blue_bar'}>
+  render(){   
+    
+ return( 
            
-        <Link to='/' className={props.condition ? 'menu_images image_one' : 'no_menu_images image_one'} >
-        <img src={'images/scheduleicon.png'} className={props.condition ? 'menu_images image_one' : 'no_menu_images image_one'}/>
-        <p className={props.condition ? 'menu_title title_one' : 'no_menu_title title_one'}>Schedule</p>
-        </Link>
-        <Link to='/dance_styles' className={props.condition ? 'menu_images image_two' : 'no_menu_images image_two'} >
-        <img src={'images/stylesicon.png'} className={props.condition ? 'menu_images image_two' : 'no_menu_images image_two'}  />
-        <p className={props.condition ? 'menu_title title_two' : 'no_menu_title title_two'}>Styles</p>
-        </Link>
-        <Link to='/teachers'className={props.condition ? 'menu_images image_three' : 'no_menu_images image_three'}>
-        <img src={'images/instructors.png'} className={props.condition ? 'menu_images image_three' : 'no_menu_images image_three'}/>
-        <p className={props.condition ? 'menu_title title_three' : 'no_menu_title title_three'}>Intructors</p>
-        </Link>
-        <Link to='/dance_styles'className={props.condition ? 'menu_images image_four' : 'no_menu_images image_four'}>
-        <img src={'images/mapicon.png'} className={props.condition ? 'menu_images image_four' : 'no_menu_images image_four'}/>
-        <p className={props.condition ? 'menu_title title_four' : 'no_menu_title title_four'}>Find Us</p>
-        </Link>
+           
+       <div className='vert_menu'>
+        <Style_Button  />
+        <Teachers_Button />
+        <Schedule_Button />
+       <Find_Us_Button />
         </div> 
+    
     );   
-    };
+    };}
         export default Menu;
 
     

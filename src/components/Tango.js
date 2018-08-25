@@ -1,14 +1,8 @@
 import React from 'react';
-import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
-import Q_Instructors from './Q_Instructors';
-import Teacher_Name from './Teacher_Name';
-import Teachers from './Teachers';
 import Low_Style from './Low_Style';
-import Style_Description from './Style_Description';
 import High_Style from './High_Style'
-import Bio from './Bio';
-import PropTypes from 'prop-types';
+import Small_Menu from './Small_Menu';
+
 /*class Bio extends React.Component {
 
 
@@ -48,7 +42,7 @@ class Tango extends React.Component {
         
         <Low_Style style={this.state.style} setBio={this.setBio} classes={this.state.classes} />
        
-        
+        <Small_Menu resetChoice={this.props.resetChoice}/>        
         </div>    
     );}
     

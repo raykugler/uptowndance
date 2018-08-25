@@ -2,26 +2,38 @@ import React from 'react';
 import Typekit from 'react-typekit';
 
 
-const Cover =(props)=>{
-
+class Cover extends React.Component{
+    constructor(props){
+        super(props)
+    }
+    
+    render(){
     return(
 <div className='main'>
-<div className='overlay'>
-</div>
-<p 
-className={props.condition ? 'main_title' : 'right_title'}>
+   
+<p className='main_title'>
 
           Uptown <br/>   Dance</p>
          <Typekit kitId="sim6twb" />     
          
-         
+         <div className='bar'></div>
           <img 
-          src={'/images/mainimage.jpg'} 
+          src={'/images/mainimage.png'} 
           className='main_image'/>
-
-          </div>
+         
+         
+          
+         
+         
+</div>
+          
     );}
-    
+}
     export default Cover;
 
     /*    */
+
+    /* <input type='image' 
+    src={'/images/Hamburger_icon.svg.png'} 
+    className='hamburger'
+    onClick={this.handleClick}/> </div>*/

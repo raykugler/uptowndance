@@ -9,7 +9,7 @@ class High_Style extends React.Component {
 render(){
 return(
     <div className='top_half_menu'>  
-    <img src={'/images/right_arrow.png'} className='back_arrow' onClick={this.props.resetChoice}/>
+    
     <Bio instructor={this.props.instructor}/>
     </div>
 
