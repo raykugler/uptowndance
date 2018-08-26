@@ -3,14 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { BrowserRouter, Route , Switch,  Link} from 'react-router-dom';
-import Dance_App from './components/DanceApp';
+
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import Main from './components/Main';
 import Dance_Styles from './components/Dance_Styles';
 import Instructors from './components/Instructors';
 import Find_Us from './components/Find_Us';
-import Routes from './components/routers/AppRouter';
 
 const routes = (
   <BrowserRouter>
